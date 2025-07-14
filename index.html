@@ -148,8 +148,21 @@
           // const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
           const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
           localToDoList.push(toDoListsValue); // Now, pushing toDoListsValue in the array named as localToDoList;
+          
           // console.log(localToDoList); //  // Getting on Console Tab => ['umar'] But, we are getting only one item in the array because let (let localToDoList = []; ) is a block scope variable and everytime the data updates it remember (let localToDoList = [];) as empty array as every rendering of a program;
-          console.log(localToDoList); // Getting on Console Tab => ['apple', 'banana', 'apple', 'banana'] Now, we are getting multiple data on an array because let (let localToDoList = [];) is outside of this function previously it was an block scope now it is declared outside this function;
+          
+          // console.log(localToDoList); // Getting on Console Tab => ['apple', 'banana', 'apple', 'banana'] Now, we are getting multiple data on an array because let (let localToDoList = [];) is outside of this function previously it was an block scope now it is declared outside this function;
+
+
+          // // // Set :- It is useful when uniqueness is a priority, and the order of elements is not crucial. Sets are often used for tasks like filtering out duplicates from an array. And, in Set there is not push method applies.
+          // localToDoList = new Set(localToDoList);
+          // console.log(localToDoList); // Getting on Console Tab => Set(1) {'shiva'} and if we again enter the new data or duplicate data then we got the error => TypeError: localToDoList.push is not a function ; That means in Set there is not push method applies.
+
+          // localToDoList = [new Set(localToDoList)];
+          // console.log(localToDoList); // Getting on Console Tab => array of data inside an array of data. But, not neglecting the duplicate ones;
+
+          localToDoList = [...new Set(localToDoList)];
+          console.log(localToDoList); // Getting on Console Tab => Now, we are getting the array of data without any duplicates because of spread method;
           
           ///////////---------------------------------------------------------------------------------------
 
