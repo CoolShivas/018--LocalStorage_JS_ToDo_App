@@ -217,6 +217,12 @@
 
         const showTodoListData = () => {
           console.log(localToDoList); // Getting data on console; if no data then [];
+
+          // // // Using forEach method instead of map method because here, we don't want the new array. We only update the array;
+          localToDoList.forEach((curElem) => {
+            return addTodoDynamicElement(curElem); // Passing argument to addTodoDynamicElement() with updated data of an array;
+          });
+
         };
 
         showTodoListData(); // Calling the function;
