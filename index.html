@@ -162,7 +162,9 @@
           // console.log(localToDoList); // Getting on Console Tab => array of data inside an array of data. But, not neglecting the duplicate ones;
 
           localToDoList = [...new Set(localToDoList)];
-          console.log(localToDoList); // Getting on Console Tab => Now, we are getting the array of data without any duplicates because of spread method;
+          // console.log(localToDoList); // Getting on Console Tab => Now, we are getting the array of data without any duplicates because of spread method;
+
+          localStorage.setItem("storeLocal", JSON.stringify(localToDoList)); // Storing data on the Local Storage in key/value pairs i.e., key("storeLocal") and value(JSON.stringify(localToDoList)). Can be seen in Application Tab;
           
           ///////////---------------------------------------------------------------------------------------
 
