@@ -97,13 +97,21 @@
           event.preventDefault(); // Prevent the default behaviour automatic submission of form tag;
           console.log("Calling a addTodoList function"); // Getting on Console Tab => Calling a addTodoList function;
 
-          let divTag = document.createElement("div"); // Creation of div tag;
-          divTag.className = "main_todo_div"; // Giving the class to div tag;
-          console.log(divTag); // Getting the div element on Console Tab after AddToDo btn click;
+          // let divTag = document.createElement("div"); // Creation of div tag;
+          // divTag.className = "main_todo_div"; // Giving the class to div tag;
+          // console.log(divTag); // Getting the div element on Console Tab after AddToDo btn click;
 
-          let deleteBtn = document.createElement('button'); // Creation of button tag;
-          deleteBtn.innerText = "Delete"; // Giving the text to button tag;
-          console.log(deleteBtn); // Getting the button element on Console Tab after AddToDo btn click;
+          // let deleteBtn = document.createElement('button'); // Creation of button tag;
+          // deleteBtn.innerText = "Delete"; // Giving the text to button tag;
+          // console.log(deleteBtn); // Getting the button element on Console Tab after AddToDo btn click;
+
+          
+          /** Instead of Creating the div and button tag separately. We can make it once.**/
+          let divTag = document.createElement("div"); // Creation of div tag;
+          divTag.classList.add('main_todo_div'); // Giving the class name to div tag;
+          divTag.innerHTML = `<li></li><button class="deleteBtn">Delete</button>`; // Creation of li tag & btn tag with class name with text Delete;
+          console.log(divTag); // Getting  on Console Tab. The div element and inside it li tag with btn tag form after AddToDo btn click;
+
         };
 
         // // // ----// //----// Ending of defining a function addTodoList and calling inside add btn listener. //----// //----//
