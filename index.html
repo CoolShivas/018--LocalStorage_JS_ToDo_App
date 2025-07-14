@@ -93,7 +93,8 @@
 
         // // // ----// //----// Starting of defining a function addTodoList and calling inside add btn listener. //----// //----//
 
-        const addTodoList = () => {
+        const addTodoList = (event) => {
+          event.preventDefault(); // Prevent the default behaviour automatic submission of form tag;
           console.log("Calling a addTodoList function"); // Getting on Console Tab => Calling a addTodoList function;
         };
 
@@ -103,9 +104,9 @@
 
         // // // ----// //----// Starting of click event listener to add todos and calling a function addTodoList. //----// //----//
 
-        document.querySelector(".btn").addEventListener('click', () => {
+        document.querySelector(".btn").addEventListener('click', (event) => {
           console.log("Add btn click"); // Getting on Console Tab => Add btn click;
-          addTodoList(); // Calling or invoking the function;
+          addTodoList(event); // Calling or invoking the function;
         });
 
         // // // ----// //----// Ending of click event listener to add todos and calling a function addTodoList. //----// //----//
