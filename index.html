@@ -109,7 +109,7 @@
           /** Instead of Creating the div and button tag separately. We can make it once.**/
           let divTag = document.createElement("div"); // Creation of div tag;
           divTag.classList.add('main_todo_div'); // Giving the class name to div tag;
-          divTag.innerHTML = `<li></li><button class="deleteBtn">Delete</button>`; // Creation of li tag & btn tag with class name with text Delete;
+          divTag.innerHTML = `<li>${accInputValue.value}</li><button class="deleteBtn">Delete</button>`; // Creation of li tag & btn tag with class name with text Delete;
           console.log(divTag); // Getting  on Console Tab. The div element and inside it li tag with btn tag form after AddToDo btn click;
 
           accToDoListElem.append(divTag); // Pushing the divTag inside the todo-lists-elem i.e., section tag; Getting the Output on the display after AddTodo btn click as li and delete btn;
