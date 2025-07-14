@@ -140,6 +140,16 @@
           // deleteBtn.innerText = "Delete"; // Giving the text to button tag;
           // console.log(deleteBtn); // Getting the button element on Console Tab after AddToDo btn click;
 
+          ///////////---------------------------------------------------------------------------------------
+
+          let localToDoList = []; // Declaring a variable to make an empty array to store data;
+          // const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
+          const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
+          localToDoList.push(toDoListsValue); // Now, pushing toDoListsValue in the array named as localToDoList;
+          console.log(localToDoList); //  // Getting on Console Tab => ['umar'] But, we are getting only one item in the array because let (let localToDoList = []; ) is a block scope variable and everytime the data updates it remember (let localToDoList = [];) as empty array as every rendering of a program;
+          
+          ///////////---------------------------------------------------------------------------------------
+
           
           /** Instead of Creating the div and button tag separately. We can make it once.**/
           let divTag = document.createElement("div"); // Creation of div tag;
