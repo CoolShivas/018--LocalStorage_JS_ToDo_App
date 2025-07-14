@@ -121,7 +121,8 @@
 
         // // // It is defined on top to get updated or previous data from the localStorage instead of accesing the other function;
         const getTodoListFromLocal = () => {
-          console.log(JSON.parse(localStorage.getItem("storeLocal"))); // Getting data from localStorage on console after refreshing the page;
+          // console.log(JSON.parse(localStorage.getItem("storeLocal"))); // Getting data from localStorage on console after refreshing the page;
+          return(JSON.parse(localStorage.getItem("storeLocal"))); // Returning it to reflect data on display;
         };
 
         // // // ----// //----// Ending of defining a function getTodoListFromLocal. //----// //----//
@@ -140,6 +141,20 @@
         console.log(accToDoListElem); // Getting the section element on Console Tab;
 
         // // // ----// //----// Ending of Select the necessary DOM elements and storing their references. //----// //----//
+
+        /////*****************************************************************************/////
+
+        // // // ----// //----// Starting of defining a function addTodoDynamicElement and passing the same argument as parameter from showTodoListData function. //----// //----//
+
+        const addTodoDynamicElement = (curElem) => { // Passing updated parameter(curElem) to show on display;
+          let divTag = document.createElement("div"); // Creation of div tag;
+          divTag.classList.add('main_todo_div'); // Giving the class name to div tag;
+          divTag.innerHTML = `<li>${curElem}</li><button class="deleteBtn">Delete</button>`; // Creation of li tag & btn tag with class name with text Delete;
+
+          accToDoListElem.append(divTag); // Pushing the divTag inside the todo-lists-elem i.e., section tag; Getting the Output on the display after AddTodo btn click as li and delete btn;
+        };
+
+        // // // ----// //----// Ending of defining a function addTodoDynamicElement and passing the same argument as parameter from showTodoListData function. //----// //----//
 
         /////*****************************************************************************/////
 
