@@ -70,15 +70,27 @@
   </head>
   <body>
     <center>
-        <header>Local Storage ToDo App</header>
-    <br />
-    <form action="#">
-      <div>
-        <input type="text" id="inputValue" />
-        <button class="btn">Add ToDo</button>
-      </div>
-      <section class="todo-lists-elem"></section>
-    </form>
+      <header>Local Storage ToDo App</header>
+      <br />
+      <form action="#">
+        <div>
+          <input type="text" id="inputValue" />
+          <button class="btn">Add ToDo</button>
+        </div>
+        <section class="todo-lists-elem"></section>
+      </form>
+      <script>
+        // // // ----// //----// Starting of Select the necessary DOM elements and storing their references. //----// //----//
+
+        const accInputValue = document.getElementById("inputValue");
+        console.log(accInputValue); // Getting the input element on Console Tab;
+        const accToDoListElem = document.querySelector(".todo-lists-elem");
+        console.log(accToDoListElem); // Getting the section element on Console Tab;
+
+        // // // ----// //----// Ending of Select the necessary DOM elements and storing their references. //----// //----//
+
+        /////*****************************************************************************/////
+      </script>
     </center>
   </body>
 </html>
