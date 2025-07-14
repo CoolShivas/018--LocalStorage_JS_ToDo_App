@@ -177,7 +177,10 @@
           // let localToDoList = []; // Declaring a variable to make an empty array to store data;
           // const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
           const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
-          localToDoList.push(toDoListsValue); // Now, pushing toDoListsValue in the array named as localToDoList;
+          
+          // // // Use of Conditional Statement with includes method to check the duplicate on server-side or display/screen. Whereas for localStorage we have used the Set method to neglect the duplicate data like wise here if-else & includes();
+          if(!localToDoList.includes(toDoListsValue)){
+            localToDoList.push(toDoListsValue); // Now, pushing toDoListsValue in the array named as localToDoList;
           
           // console.log(localToDoList); //  // Getting on Console Tab => ['umar'] But, we are getting only one item in the array because let (let localToDoList = []; ) is a block scope variable and everytime the data updates it remember (let localToDoList = [];) as empty array as every rendering of a program;
           
@@ -209,6 +212,7 @@
 
 
           addTodoDynamicElement(toDoListsValue); // Reusable function i.e.,(addTodoDynamicElement(toDoListsValue)) having same thing only argument changes;
+          }
 
           accInputValue.value = ""; //Clearing the input field after enter data;
 
