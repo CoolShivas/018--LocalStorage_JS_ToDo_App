@@ -115,6 +115,8 @@
         <section class="todo-lists-elem"></section>
       </form>
       <script>
+         let localToDoList = []; // Declaring a variable to make an empty array to store data and make it function scope instead of block;
+
         // // // ----// //----// Starting of Select the necessary DOM elements and storing their references. //----// //----//
 
         const accInputValue = document.getElementById("inputValue");
@@ -142,11 +144,12 @@
 
           ///////////---------------------------------------------------------------------------------------
 
-          let localToDoList = []; // Declaring a variable to make an empty array to store data;
+          // let localToDoList = []; // Declaring a variable to make an empty array to store data;
           // const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
           const toDoListsValue = accInputValue.value; // Storing the accInputValue.value to toDoListsValue variable;
           localToDoList.push(toDoListsValue); // Now, pushing toDoListsValue in the array named as localToDoList;
-          console.log(localToDoList); //  // Getting on Console Tab => ['umar'] But, we are getting only one item in the array because let (let localToDoList = []; ) is a block scope variable and everytime the data updates it remember (let localToDoList = [];) as empty array as every rendering of a program;
+          // console.log(localToDoList); //  // Getting on Console Tab => ['umar'] But, we are getting only one item in the array because let (let localToDoList = []; ) is a block scope variable and everytime the data updates it remember (let localToDoList = [];) as empty array as every rendering of a program;
+          console.log(localToDoList); // Getting on Console Tab => ['apple', 'banana', 'apple', 'banana'] Now, we are getting multiple data on an array because let (let localToDoList = [];) is outside of this function previously it was an block scope now it is declared outside this function;
           
           ///////////---------------------------------------------------------------------------------------
 
