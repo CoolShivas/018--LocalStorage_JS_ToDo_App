@@ -115,7 +115,22 @@
         <section class="todo-lists-elem"></section>
       </form>
       <script>
-         let localToDoList = []; // Declaring a variable to make an empty array to store data and make it function scope instead of block;
+        /////*****************************************************************************/////
+
+        // // // ----// //----// Starting of defining a function getTodoListFromLocal. //----// //----//
+
+        // // // It is defined on top to get updated or previous data from the localStorage instead of accesing the other function;
+        const getTodoListFromLocal = () => {
+          console.log(JSON.parse(localStorage.getItem("storeLocal"))); // Getting data from localStorage on console after refreshing the page;
+        };
+
+        // // // ----// //----// Ending of defining a function getTodoListFromLocal. //----// //----//
+
+        /////*****************************************************************************/////
+
+        //  let localToDoList = []; // Declaring a variable to make an empty array to store data and make it function scope instead of block;
+
+        let localToDoList = getTodoListFromLocal() || []; // Referencing to getTodoListFromLocal() to get the updated or previous data first. If data is not there then blank array or null;
 
         // // // ----// //----// Starting of Select the necessary DOM elements and storing their references. //----// //----//
 
