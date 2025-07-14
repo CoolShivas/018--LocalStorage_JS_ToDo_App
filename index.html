@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Local Storage ToDo App</h1>
-    <br>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Urbanist", sans-serif;
+      }
+
+      html {
+        color: #fff;
+        font-size: 62.5%;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1b1b1d;
+      }
+
+      button {
+        height: 5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      hr {
+        margin-bottom: 3.2rem;
+      }
+
+      header {
+        text-align: left;
+        padding: 2.5rem;
+        font-size: 2.5rem;
+      }
+
+      p,
+      li,
+      button {
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+        font-family: "Urbanist", sans-serif;
+        line-height: 1.6;
+      }
+
+      button {
+        background-color: #f5ee62;
+        padding: 0.6rem 2.4rem;
+        border-radius: 10rem;
+        margin-right: 3.6rem;
+        cursor: pointer;
+        transition: all 0.3s linear;
+
+        &:hover {
+          box-shadow: inset 0 0 0 0.2rem #f5ee62;
+          background-color: transparent;
+          color: #f5ee62;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+        <header>Local Storage ToDo App</header>
+    <br />
     <form action="#">
-        <div>
-            <input type="text" id="inputValue" />
-            <button class="btn">Add ToDo</button>
-        </div>
-        <section class="todo-lists-elem"></section>
+      <div>
+        <input type="text" id="inputValue" />
+        <button class="btn">Add ToDo</button>
+      </div>
+      <section class="todo-lists-elem"></section>
     </form>
-</body>
+    </center>
+  </body>
 </html>
