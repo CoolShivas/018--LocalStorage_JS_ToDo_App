@@ -213,6 +213,18 @@
 
         /////*****************************************************************************/////
 
+        // // // ----// //----// Starting of defining a function showTodoListData to display todos on page load. //----// //----//
+
+        const showTodoListData = () => {
+          console.log(localToDoList); // Getting data on console; if no data then [];
+        };
+
+        showTodoListData(); // Calling the function;
+
+        // // // ----// //----// Ending of defining a function showTodoListData to display todos on page load. //----// //----//
+
+        /////*****************************************************************************/////
+
         // // // ----// //----// Starting of click event listener to add todos and calling a function addTodoList. //----// //----//
 
         document.querySelector(".btn").addEventListener("click", (event) => {

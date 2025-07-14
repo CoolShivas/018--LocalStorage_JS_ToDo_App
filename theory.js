@@ -25,7 +25,7 @@
                         - Use "JSON.parse" to convert the stored string into an array.
 
  * # 6.) Show ToDos :-
-                        - Create a function (e.g., "showTodoList") to display todos on page load.
+                        - Create a function (e.g., "showTodoListData") to display todos on page load.
                         - Retrieve todo data from local storage using "getTodoListFromLocal".
                         - Iterate through the array and dynamically add todos to the container.
 
