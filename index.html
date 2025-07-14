@@ -157,6 +157,19 @@
 
         /////*****************************************************************************/////
 
+        // // // ----// //----// Starting of defining a function removeTodoList and calling inside accToDoListElem listener. //----// //----//
+
+        const removeTodoList = (event) => {
+          console.log(event); // Getting on Console Tab => PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …}
+          let delRemove = event.target; // Defining a variable and passing event.target;
+          console.log(event.target);  // Getting on Console Tab => We are able to target the value by one click;
+          delRemove.remove(); // Getting on Console Tab => Removing the targeted value;
+        };
+
+        // // // ----// //----// Ending of defining a function removeTodoList and calling inside accToDoListElem listener. //----// //----//
+
+        /////*****************************************************************************/////
+
         // // // ----// //----// Starting of click event listener to add todos and calling a function addTodoList. //----// //----//
 
         document.querySelector(".btn").addEventListener("click", (event) => {
@@ -165,6 +178,18 @@
         });
 
         // // // ----// //----// Ending of click event listener to add todos and calling a function addTodoList. //----// //----//
+
+        /////*****************************************************************************/////
+
+        // // // ----// //----// Starting of click event listener to remove or delete todos and calling a function removeTodoList. //----// //----//
+
+        accToDoListElem.addEventListener("click", (event) => {
+          event.preventDefault; // Prevent the default behaviour automatic submission of form tag;
+          // console.log(event.target);
+          removeTodoList(event); // Calling the function here;
+        });
+
+        // // // ----// //----// Ending of click event listener to remove or delete todos and calling a function removeTodoList. //----// //----//
 
         /////*****************************************************************************/////
       </script>

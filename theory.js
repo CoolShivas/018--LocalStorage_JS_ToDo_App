@@ -30,12 +30,12 @@
                         - Iterate through the array and dynamically add todos to the container.
 
  * # 7.) Remove ToDo Function :-
-                        - Create a function (e.g., "removeTodo") to handle removing a todo.
+                        - Create a function (e.g., "removeTodoList") to handle removing a todo.
                         - Use event delegation by adding a click event listener to the container ("mainTodoElem").
-                        - Check if the clicked element has a class of "deleteBtn" and call the "removeTodo" function.
+                        - Check if the clicked element has a class of "deleteBtn" and call the "removeTodoList" function.
 
  * # 8.) Update Local Storage on Remove :-
-                        - In the "removeTodo" function, update the "localTodoLists" array by filtering out the remove todo.
+                        - In the "removeTodoList" function, update the "localTodoLists" array by filtering out the remove todo.
                         - Update local storage using "localStorage.setItem".
 
  * 
