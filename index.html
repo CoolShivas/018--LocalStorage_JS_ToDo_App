@@ -129,6 +129,18 @@
 
         /////*****************************************************************************/////
 
+        
+        // // // ----// //----// Starting of defining a function updateToDoListOnLocalStorag to update the localStorage of filter data. //----// //----//
+
+        const updateToDoListOnLocalStorage = (localToDoList) => {
+          return(localStorage.setItem("storeLocal", JSON.stringify(localToDoList))); // // Finally, filtering i.e., daleting the targetted value and storing the updated data on localStorage;
+        };
+
+        // // // ----// //----// Ending of defining a function updateToDoListOnLocalStorag to update the localStorage of filter data. //----// //----//
+
+        /////*****************************************************************************/////
+
+
         //  let localToDoList = []; // Declaring a variable to make an empty array to store data and make it function scope instead of block;
 
         let localToDoList = getTodoListFromLocal() || []; // Referencing to getTodoListFromLocal() to get the updated or previous data first. If data is not there then blank array or null;
@@ -244,6 +256,8 @@
           localToDoList = localToDoList.filter((currElement) => {
             return(currElement !== deleteToDos.toLowerCase());
           });
+
+          updateToDoListOnLocalStorage(localToDoList); // Now, updating the localStorage with the filtered data by calling this function. After the getTodoListFromLocal();
 
           console.log(deleteToDos); // Getting on Console Tab => Now, we are getting the targetted delete btn click values; 
 
