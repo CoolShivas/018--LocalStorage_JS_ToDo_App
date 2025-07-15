@@ -234,8 +234,11 @@
           
           // delRemove.remove(); // Getting on Console Tab => Removing the targeted value from the screen/display. If you can a delete btn or text value or near by all div it will be removed but only not from localStorage;
 
-          let deleteToDos = delRemove.previousElementSibling; // Targetting the previous element sibling;
-          console.log(deleteToDos); // Getting on Console Tab =>  <li>varun</li> i.e., if we click on text or delete btn we are able to get the element li tag;
+          // let deleteToDos = delRemove.previousElementSibling; // Targetting the previous element sibling;
+          // console.log(deleteToDos); // Getting on Console Tab =>  <li>varun</li> i.e., if we click on text or delete btn we are able to get the element li tag;
+
+          let deleteToDos = delRemove.previousElementSibling.innerText; // Targetting the previous element sibling text or value;
+          console.log(deleteToDos); // Getting on Console Tab => Now, instead of li tag. If we now click on text we get error or if we click on delete btn then getting the targeted value of that li tag.
         };
 
         // // // ----// //----// Ending of defining a function removeTodoList and calling inside accToDoListElem listener. //----// //----//
