@@ -252,12 +252,16 @@
           let deleteToDos = delRemove.previousElementSibling.innerText; // Targetting the previous element sibling text or value;
           // console.log(deleteToDos); // Getting on Console Tab => Now, instead of li tag. If we now click on text we get error or if we click on delete btn then getting the targeted value of that li tag.
 
+          let delParentElem = delRemove.parentElement; // Catching the parent element i.e., section tag  to remove the child li tag;
+
           // // // Now, comparing the array of localToDoList with the targetted value of items whether to delete the correct one by filtering out the data;
           localToDoList = localToDoList.filter((currElement) => {
             return(currElement !== deleteToDos.toLowerCase());
           });
 
           updateToDoListOnLocalStorage(localToDoList); // Now, updating the localStorage with the filtered data by calling this function. After the getTodoListFromLocal();
+
+          delParentElem.remove(); // Deleting the targeted li tag now. From the main screen/display;
 
           console.log(deleteToDos); // Getting on Console Tab => Now, we are getting the targetted delete btn click values; 
 
