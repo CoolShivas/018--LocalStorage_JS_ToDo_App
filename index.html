@@ -305,7 +305,12 @@
         accToDoListElem.addEventListener("click", (event) => {
           event.preventDefault; // Prevent the default behaviour automatic submission of form tag;
           // console.log(event.target);
-          removeTodoList(event); // Calling the function here;
+          // removeTodoList(event); // Calling the function here;
+
+          if(event.target.classList.contains("deleteBtn")){ 
+            // // Finally, deleting the appropriate deletion from the delete btn only. Previously, deletion happens from text and delete btn and by espically section tag anywhere clicking;
+            removeTodoList(event);
+          }
         });
 
         // // // ----// //----// Ending of click event listener to remove or delete todos and calling a function removeTodoList. //----// //----//
