@@ -238,7 +238,15 @@
           // console.log(deleteToDos); // Getting on Console Tab =>  <li>varun</li> i.e., if we click on text or delete btn we are able to get the element li tag;
 
           let deleteToDos = delRemove.previousElementSibling.innerText; // Targetting the previous element sibling text or value;
-          console.log(deleteToDos); // Getting on Console Tab => Now, instead of li tag. If we now click on text we get error or if we click on delete btn then getting the targeted value of that li tag.
+          // console.log(deleteToDos); // Getting on Console Tab => Now, instead of li tag. If we now click on text we get error or if we click on delete btn then getting the targeted value of that li tag.
+
+          // // // Now, comparing the array of localToDoList with the targetted value of items whether to delete the correct one by filtering out the data;
+          localToDoList = localToDoList.filter((currElement) => {
+            return(currElement !== deleteToDos.toLowerCase());
+          });
+
+          console.log(deleteToDos); // Getting on Console Tab => Now, we are getting the targetted delete btn click values; 
+
         };
 
         // // // ----// //----// Ending of defining a function removeTodoList and calling inside accToDoListElem listener. //----// //----//
